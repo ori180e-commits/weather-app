@@ -1,0 +1,170 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(250, 243, 229);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weatherForm{
+    margin: 20px;
+}
+
+.cityInput{
+    padding: 10px;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.677);
+    font-weight: bold;
+    border: 2px solid rgba(0, 0, 0, 0.292);
+    border-radius: 5px;
+    margin: 10px;
+    width: 300px;
+}
+button[type = "submit"]{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2em;
+    backdrop-filter: blur(5px);
+    background-color: rgba(68, 171, 255, 0.469);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+button[type = "submit"]:hover{
+    background-color: rgb(61, 147, 216);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    width: min(90vw, 400px);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 25px auto 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+    transition: transform 1s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+h1{
+
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+p{
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+.cityDisplay, .tempDisplay{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.719);
+    margin-bottom: 25px;
+}
+.humidityDisplay{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.descDisplay{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.weatherEmoji{
+    margin: 0;
+    font-size: 7.5rem;
+}
+.errorDisplay{
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.531);
+}
+.videoBackground {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.videoBackground.is-visible {
+    opacity: 1;
+}
+
+.weatherForm {
+    position: relative;
+    z-index: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        transition: none;
+    }
+}
+#textbox{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+label{
+    font-size: 1.5em;
+}
+.unitControls{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.4rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.12);
+}
+.unitChoice{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.229);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+.unitChoice:hover{
+    background: rgba(255, 255, 255, 0.204);
+    transform: translateY(-1px);
+}
+.unitChoice input[type="radio"]{
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0;
+    accent-color: rgb(48, 126, 166);
+    cursor: pointer;
+}
+.unitChoice input[type="radio"]:focus-visible{
+    outline: 3px solid rgba(48, 126, 166, 0.4);
+    outline-offset: 3px;
+}
+.unitChoice label{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button{
+    font-size: 1.5em;
+    border-radius: 5px;
+    background-color: rgb(218, 255, 243);
+    margin-top: 10px;
+}
+button:hover{
+    background-color: rgb(198, 235, 223);
+}
